@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  myZhiHuDaily
+//
+//  Copyright © 2016年 刘 晓东. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import "PKLog.h"
+
+#define kZHDCookie   @"kZHDCookie"
+
+#define kHttpAllowSaveCache    @"kHttpAllowSaveCache"
+#define kHttpAllowFetchCache   @"kHttpAllowFetchCache"
+
+#ifdef debug
+    #define Host @"http://test_server"
+#else
+    #define Host @"http://news-at.zhihu.com/"
+#endif
+
+#define StartPicURL @"http://news-at.zhihu.com/api/4/start-image/%@"  //320*432 480*728 720*1184 1080*1776
+#define StartPicURL_SSL @"https://news-at.zhihu.com/api/4/start-image/%@"  //320*432 480*728 720*1184 1080*1776
+
+#define AppVersionURL @"http://news-at.zhihu.com/api/4/version/ios/%@" // 2.5
+
+#define LatestNewsURL @"http://news-at.zhihu.com/api/4/news/latest"
+#define NewsContentURL @"http://news-at.zhihu.com/api/4/news/%@" //news' id  e.g. 3892357
+#define NewsBeforeURL @"http://news.at.zhihu.com/api/4/news/before/%@" //date e.g. 20130520
+#define NewsInfoURL @"http://news-at.zhihu.com/api/4/story-extra/%@" // news' id
+#define NewsLongCommentURL @"http://news-at.zhihu.com/api/4/story/%@/long-comments" // news' id
+#define NewsShortCommentURL @"http://news-at.zhihu.com/api/4/story/%@/short-comments" // news' id
+#define NewsThemesURL @"http://news-at.zhihu.com/api/4/themes"
+#define NewsThemeContentURL @"http://news-at.zhihu.com/api/4/theme/%@" // themes's id
+
+
+#define SectionsCatalogURL @"http://news-at.zhihu.com/api/4/sections"
+#define SectionListURL @"http://news-at.zhihu.com/api/4/section/%@" // section's id
+#define SectionContentURL @"http://news-at.zhihu.com/api/4/story/%@" // id
+#define SectionsBeforeURL @"http://news-at.zhihu.com/api/3/section/1/before/%@" // timestamp
+
+
+#endif /* PrefixHeader_pch */
